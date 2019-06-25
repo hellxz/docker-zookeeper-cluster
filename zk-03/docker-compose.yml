@@ -1,0 +1,15 @@
+version: '3'
+services:
+    zk-03:
+        image: zookeeper:3.5.5
+        restart: always
+        container_name: zk-03
+        ports:
+            - 2183:2181
+            - 2890:2888
+            - 3890:3888
+        environment:
+            ZOO_MY_ID: 3
+            ZOO_SERVERS: ${ZOO_SERVERS}
+        network_mode: "host"
+

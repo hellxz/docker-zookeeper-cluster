@@ -1,0 +1,16 @@
+version: '3'
+services:
+    zk-02:
+        image: zookeeper:3.5.5
+        restart: always
+        container_name: zk-02
+        ports:
+            - 2182:2181
+            - 2889:2888
+            - 3889:3888
+        environment:
+            #quorumListenOnAllIPs: true
+            ZOO_MY_ID: 2
+            ZOO_SERVERS: ${ZOO_SERVERS}
+        network_mode: "host"
+
