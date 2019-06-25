@@ -1,6 +1,6 @@
 ## Docker-compose Zookeeper Cluster
 
-Zookeeper容器的虚拟化集群，使用Docker-compose构建，通过主机网络进行沟通，配合我的博客食用更佳
+Zookeeper容器的虚拟化集群，使用Docker-compose构建，通过主机网络进行沟通，配合[我的博客](https://www.cnblogs.com/hellxz/p/docker_zookeeper_cluster_and_kafka_cluster.html)食用更佳
 
 ### 目录结构
 
@@ -33,7 +33,7 @@ ZOO_SERVERS=server.1=10.2.114.110:2888:3888;2181 server.2=10.2.114.110:2889:3889
 
 `dokcer-compose.yml`为docker-compose的配置文件，以`zk-01`举例
 
-```bash
+```yaml
 version: '3'
 services:
     zk-01:
