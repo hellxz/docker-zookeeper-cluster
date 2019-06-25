@@ -22,7 +22,7 @@ Zookeeper容器的虚拟化集群，使用Docker-compose构建，通过主机网
 
 其中`.env`配置文件为`docker-compose.yml`提供了多个zookeeper的发现服务节点列表
 
-```bash
+```properties
 # set args to docker-compose.yml by default
 # set zookeeper servers, pattern is `server.x=ip:follower-port:election-port;client:port`,
 # such as "server.1=192.168.1.1:2888:3888;2181 server.2=192.168.1.2:2888:3888;2181", 
